@@ -1,0 +1,8 @@
+node_modules
+*.js
+*.js.map
+hc-dna/.cargo
+hc-dna/target
+
+!rollup.config.icons.js
+!rollup.config.js
