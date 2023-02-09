@@ -1,6 +1,6 @@
-# Language: note-ipfs
+# Language: file-storage
 
-This is an example AD4M Language project which implements simple text notes stored in IPFS objects.
+This is an example AD4M Language project which implements file storage using Holochain
 
 ## Build overview
 
