@@ -3,6 +3,7 @@ node_modules
 *.js.map
 hc-dna/.cargo
 hc-dna/target
+hc-dna/workdir/*.dna
 
 !rollup.config.icons.js
 !rollup.config.js

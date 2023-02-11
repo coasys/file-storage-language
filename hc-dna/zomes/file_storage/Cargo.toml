@@ -19,4 +19,4 @@ integrity = { path = "../integrity" }
 sha2 = "0.10.5"
 hdk = "0.1.0"
 holo_hash = "0.1.0"
-hc_zome_file_storage = { git = "https://github.com/holochain-open-dev/file-storage", package = "hc_zome_file_storage" }
+hc_zome_file_storage_coordinator = "0.1.0"

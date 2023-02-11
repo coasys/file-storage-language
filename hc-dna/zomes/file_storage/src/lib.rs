@@ -1,7 +1,7 @@
 use chrono::{DateTime, NaiveDateTime, Utc};
 use hdk::prelude::*;
 
-use integrity::{EntryTypes, Sample, SamplePrivate};
+extern crate hc_zome_file_storage_coordinator;
 
 #[hdk_extern]
 fn init(_: ()) -> ExternResult<InitCallbackResult> {
@@ -22,13 +22,13 @@ pub fn get_now() -> DateTime<Utc> {
     }
 }
 
-#[hdk_extern]
-fn call(data: String) -> ExternResult<i64> {
-    let now = get_now();
-    let entry = EntryTypes::Sample(Sample { data: data.clone() });
-    create_entry(entry)?;
-    let after = get_now();
-    let diff = (after - now).num_microseconds().unwrap();
-    //debug!("call: {} microseconds", diff);
-    Ok(diff)
-}
+// #[hdk_extern]
+// fn call(data: String) -> ExternResult<i64> {
+//     let now = get_now();
+//     let entry = EntryTypes::Sample(Sample { data: data.clone() });
+//     create_entry(entry)?;
+//     let after = get_now();
+//     let diff = (after - now).num_microseconds().unwrap();
+//     //debug!("call: {} microseconds", diff);
+//     Ok(diff)
+// }
