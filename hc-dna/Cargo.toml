@@ -1,7 +1,6 @@
 [workspace]
 members = [
-  "zomes/integrity_file_storage",
-  "zomes/integrity_expression",
+  "zomes/integrity",
   "zomes/file_storage"
 ]
 

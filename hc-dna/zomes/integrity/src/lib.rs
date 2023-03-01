@@ -1,6 +1,18 @@
 use chrono::{DateTime, Utc};
 use hdi::prelude::*;
-use integrity_file_storage::FileMetadata;
+
+
+#[hdk_entry_helper]
+pub struct FileChunk(SerializedBytes);
+
+#[hdk_entry_helper]
+pub struct FileMetadata {
+    pub name: String,
+    pub size: usize,
+    pub file_type: String,
+    pub checksum: String,
+    pub chunks_hashes: Vec<EntryHash>,
+}
 
 #[derive(Serialize, Deserialize, Clone, SerializedBytes, Debug)]
 pub struct ExpressionProof {
@@ -8,7 +20,7 @@ pub struct ExpressionProof {
     pub key: String,
 }
 
-#[derive(Debug, Serialize, Deserialize, SerializedBytes)]
+#[hdk_entry_helper]
 pub struct FileExpression {
     pub author: String,
     pub proof: ExpressionProof,
@@ -16,11 +28,13 @@ pub struct FileExpression {
     pub data: FileMetadata,
 }
 
-app_entry!(FileExpression);
 
 #[hdk_entry_defs]
 #[unit_enum(UnitEntryTypes)]
 pub enum EntryTypes {
     #[entry_def(visibility = "public")]
-    FileExpression(FileExpression)
+    FileExpression(FileExpression),
+
+    #[entry_def(visibility = "public")]
+    FileChunk(FileChunk),
 }
