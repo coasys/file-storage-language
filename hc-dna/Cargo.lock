@@ -570,7 +570,6 @@ dependencies = [
  "hc_zome_file_storage_coordinator",
  "hdk",
  "holo_hash",
- "integrity",
  "lazy_static",
  "serde",
  "sha2",
@@ -918,13 +917,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "integrity"
-version = "0.1.0"
-dependencies = [
- "hc_zome_file_storage_integrity",
-]
-
-[[package]]
 name = "integrity_expression"
 version = "0.1.0"
 dependencies = [
@@ -934,6 +926,13 @@ dependencies = [
  "hdk",
  "holo_hash",
  "serde",
+]
+
+[[package]]
+name = "integrity_file_storage"
+version = "0.1.0"
+dependencies = [
+ "hc_zome_file_storage_integrity",
 ]
 
 [[package]]

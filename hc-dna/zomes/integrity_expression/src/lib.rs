@@ -15,11 +15,4 @@ pub struct Expression {
     pub data: SerializedBytes,
 }
 
-app_entry!(Expression);
 
-#[hdk_entry_defs]
-#[unit_enum(UnitEntryTypes)]
-pub enum EntryTypes {
-    #[entry_def(visibility = "public")]
-    Expression(Expression),
-}
