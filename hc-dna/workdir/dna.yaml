@@ -5,11 +5,9 @@ integrity:
   properties: null
   origin_time: 2023-02-07T14:37:17.497352Z
   zomes:
-    - name: integrity-file-storage
-      bundled: ../target/wasm32-unknown-unknown/release/integrity_file_storage.wasm
-    - name: integrity-expressions
-      bundled: ../target/wasm32-unknown-unknown/release/integrity_expression.wasm
+    - name: integrity
+      bundled: ../target/wasm32-unknown-unknown/release/integrity.wasm
 coordinator:
   zomes:
-    - name: integrity
+    - name: file_storage
       bundled: ../target/wasm32-unknown-unknown/release/file_storage.wasm
