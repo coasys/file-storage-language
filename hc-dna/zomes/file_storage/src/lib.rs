@@ -1,5 +1,7 @@
 use chrono::{DateTime, NaiveDateTime, Utc};
 use hdk::prelude::*;
+use integrity_expression::{FileExpression, EntryTypes as ExpressionEntryTypes};
+use integrity_file_storage::{FileMetadata, EntryTypes as FileStorageEntryTypes};
 
 extern crate hc_zome_file_storage_coordinator;
 
@@ -22,13 +24,10 @@ pub fn get_now() -> DateTime<Utc> {
     }
 }
 
-// #[hdk_extern]
-// fn call(data: String) -> ExternResult<i64> {
-//     let now = get_now();
-//     let entry = EntryTypes::Sample(Sample { data: data.clone() });
-//     create_entry(entry)?;
-//     let after = get_now();
-//     let diff = (after - now).num_microseconds().unwrap();
-//     //debug!("call: {} microseconds", diff);
-//     Ok(diff)
-// }
+
+
+#[hdk_extern]
+fn store_file_expression(expression: FileExpression) -> ExternResult<HoloHash<hdk::prelude::holo_hash::hash_type::Action>> {
+    let entry = ExpressionEntryTypes::FileExpression(expression);
+    Ok(create_entry(entry)?)
+}

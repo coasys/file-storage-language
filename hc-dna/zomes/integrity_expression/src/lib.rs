@@ -17,3 +17,10 @@ pub struct FileExpression {
 }
 
 app_entry!(FileExpression);
+
+#[hdk_entry_defs]
+#[unit_enum(UnitEntryTypes)]
+pub enum EntryTypes {
+    #[entry_def(visibility = "public")]
+    FileExpression(FileExpression)
+}
