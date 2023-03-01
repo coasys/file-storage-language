@@ -6,7 +6,7 @@ export class FileMetadata {
   name: string;
   size: number;
   file_type: string;
-  cecksum: string;
+  checksum: string;
   chunks_hashes: Array<EntryHash>;
 }
 
