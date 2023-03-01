@@ -570,6 +570,8 @@ dependencies = [
  "hc_zome_file_storage_coordinator",
  "hdk",
  "holo_hash",
+ "integrity_expression",
+ "integrity_file_storage",
  "lazy_static",
  "serde",
  "sha2",
@@ -925,6 +927,7 @@ dependencies = [
  "hdi",
  "hdk",
  "holo_hash",
+ "integrity_file_storage",
  "serde",
 ]
 

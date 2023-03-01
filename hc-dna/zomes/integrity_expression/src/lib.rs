@@ -1,5 +1,6 @@
 use chrono::{DateTime, Utc};
 use hdi::prelude::*;
+use integrity_file_storage::FileMetadata;
 
 #[derive(Serialize, Deserialize, Clone, SerializedBytes, Debug)]
 pub struct ExpressionProof {
@@ -7,12 +8,12 @@ pub struct ExpressionProof {
     pub key: String,
 }
 
-#[derive(Clone, Debug, Serialize, Deserialize, SerializedBytes)]
-pub struct Expression {
+#[derive(Debug, Serialize, Deserialize, SerializedBytes)]
+pub struct FileExpression {
     pub author: String,
     pub proof: ExpressionProof,
     pub timestamp: DateTime<Utc>,
-    pub data: SerializedBytes,
+    pub data: FileMetadata,
 }
 
-
+app_entry!(FileExpression);

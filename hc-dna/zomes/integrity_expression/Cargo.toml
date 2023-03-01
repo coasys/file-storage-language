@@ -13,7 +13,7 @@ name = "integrity_expression"
 derive_more = "0"
 serde = "1"
 chrono = { version = "0.4.22", default-features = false, features = ["clock", "std", "oldtime", "serde"] }
-
+integrity_file_storage = { path = "../integrity_file_storage" }
 holo_hash = "0.1.0"
 hdi = "0.2.0"
 hdk = "0.1.0"
