@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "ad4m-test --test ./integration.test.js --bundle ./build/bundle.js",
     "build-icons": "rollup -c rollup.config.icons.js",
     "build": "npm run build-icons && tsc && rollup -c",
     "dev": "tsc && rollup -c rollup.config.icons.js && rollup -c -w"
@@ -14,10 +14,14 @@
   "license": "ISC",
   "devDependencies": {
     "@perspect3vism/ad4m": "0.2.11",
+    "@perspect3vism/ad4m-test": "0.2.16-fix.1",
     "@rollup/plugin-commonjs": "^14.0.0",
     "@rollup/plugin-node-resolve": "^8.0.0",
     "@rollup/plugin-typescript": "^4.0.0",
     "@tsconfig/svelte": "^1.0.0",
+    "@types/express": "^4.17.8",
+    "@types/uuid": "9.0.1",
+    "browserify": "^17.0.0",
     "pako": "2.1.0",
     "rollup": "^2.3.4",
     "rollup-plugin-postcss": "^3.1.8",
