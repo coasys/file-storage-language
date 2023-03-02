@@ -11,6 +11,9 @@ function isImmutableExpression(expression: Address): boolean {
     return true
 }
 
+//@ad4m-template-variable
+const name = "file-storage";
+
 export default async function create(context: LanguageContext): Promise<Language> {
     const Holochain = context.Holochain as HolochainLanguageDelegate;
     // @ts-ignore
@@ -20,12 +23,10 @@ export default async function create(context: LanguageContext): Promise<Language
     const expressionUI = new FileStorageUI()
 
     return {
-        name: 'file-storage',
+        name,
         expressionAdapter,
         expressionUI,
         interactions,
         isImmutableExpression
     } as Language
 }
-
-export const name: string = "file-storage"
