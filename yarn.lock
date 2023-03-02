@@ -366,10 +366,10 @@
   resolved "https://registry.yarnpkg.com/@msgpack/msgpack/-/msgpack-2.8.0.tgz#4210deb771ee3912964f14a15ddfb5ff877e70b9"
   integrity sha512-h9u4u/jiIRKbq25PM+zymTyW6bhTzELvOoUd+AvYriWOAKpLGnIamaET3pnHYoI5iYphAHBI4ayx0MehR+VVPQ==
 
-"@perspect3vism/ad4m-test@0.2.16-fix.3":
-  version "0.2.16-fix.3"
-  resolved "https://registry.yarnpkg.com/@perspect3vism/ad4m-test/-/ad4m-test-0.2.16-fix.3.tgz#18b448c8d83d70b53117d013884f4bee6734a857"
-  integrity sha512-+kJn3IpZCRf2MU1QqS28wbAk0UgZDDjULJw75uwYP2739ALkFiuOHx+J18C0D154CfjklPZr5/55xpLVIZaXoQ==
+"@perspect3vism/ad4m-test@0.2.16-fix.4":
+  version "0.2.16-fix.4"
+  resolved "https://registry.yarnpkg.com/@perspect3vism/ad4m-test/-/ad4m-test-0.2.16-fix.4.tgz#c9460c5e8f1d0f090803711c2e200ac7a0c1cd84"
+  integrity sha512-KwMBQjMm4B3opeieMTr02h9fczTwHCd55JCIXTIMwzcFvUxY48hKd+ixR5be+UgiqV6OQV/ntGlbQp83gpz23g==
   dependencies:
     "@apollo/client" "^3.7.8"
     "@perspect3vism/ad4m" "*"
@@ -823,7 +823,7 @@ anymatch@~3.1.2:
     normalize-path "^3.0.0"
     picomatch "^2.0.4"
 
-appdata-path@perspect3vism/appdata-path:
+"appdata-path@github:perspect3vism/appdata-path":
   version "1.0.0"
   resolved "https://codeload.github.com/perspect3vism/appdata-path/tar.gz/6304ea16cbfebc98749c33941d643c3046b45985"
 
