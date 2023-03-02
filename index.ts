@@ -13,6 +13,7 @@ function isImmutableExpression(expression: Address): boolean {
 
 export default async function create(context: LanguageContext): Promise<Language> {
     const Holochain = context.Holochain as HolochainLanguageDelegate;
+    // @ts-ignore
     await Holochain.registerDNAs([{ file: DNA, nick: DNA_NICK }]);
 
     const expressionAdapter = new Adapter(context)

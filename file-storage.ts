@@ -1,4 +1,4 @@
-import { FileExpression, EntryHash } from "./types";
+import type { FileExpression, EntryHash } from "./types";
 import { Blob } from "buffer";
 
 type ZomeCallFn = (fn: string, params: any) => Promise<any>;
