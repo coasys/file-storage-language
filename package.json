@@ -7,7 +7,8 @@
   "scripts": {
     "test": "ad4m-test --test ./integration.test.cjs --bundle ./build/bundle.js --meta '{\"name\":\"file-storage\",\"description\":\"An AD4M Language for file storage leveraging a holochain DNA\",\"sourceCodeLink\":\"https://github.com/perspect3vism/file-storage-language\",\"possibleTemplateParams\":[\"uid\",\"name\"]}'",
     "build-icons": "rollup -c rollup.config.icons.js",
-    "build": "npm run build-icons && tsc && rollup -c",
+    "build": "yarn run build-dna && yarn run build-icons && tsc && rollup -c",
+    "build-dna": "cd ./hc-dna && nix-shell --run ./build.sh && cd ..",
     "dev": "tsc && rollup -c rollup.config.icons.js && rollup -c -w"
   },
   "author": "",

@@ -16,14 +16,18 @@ export default class Adapter implements ExpressionAdapter {
     }
 
     async get(address: Address): Promise<Expression> {
-        const storage = new FileStorage((fn_name, payload) => this.#DNA.call(DNA_NICK, "file-storage", fn_name, payload));
+        const storage = new FileStorage((fn_name, payload) => this.#DNA.call(DNA_NICK, "file_storage", fn_name, payload));
 
-        const expression = (await storage.getFileExpression(Uint8Array.from(address, x => x.charCodeAt(0)))) as FileExpression
+        let addressBuffer = Buffer.from(address, "hex");
+        const expression = (await storage.getFileExpression(addressBuffer)) as FileExpression
         const data_compressed = await storage.download(expression.data.chunks_hashes);
-        const data_uncompressed = pako.inflate(data_compressed, { to: 'string' });
-        const buffer = Buffer.from(data_uncompressed.arrayBuffer())
-        const data_base64 = buffer.toString('base64')
-        expression.data.data_base64 = data_base64
+        let data_stream = await data_compressed.arrayBuffer();
+
+        const data_uncompressed = pako.inflate(data_stream);
+        const buffer = Buffer.from(data_uncompressed)
+
+        expression.data.data_base64 = buffer.toString("base64")
+
         return expression
     }
 }
