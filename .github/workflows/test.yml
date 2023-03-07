@@ -83,5 +83,5 @@ jobs:
     - run: rustup target add wasm32-unknown-unknown
     - run: npm install -g npm
     - run: ./hc-dna/tests/download-hc-binaries.sh && mv ./hc /usr/local/bin
-    - run: npm install && npm run build
+    - run: npm install && ./hc-dna/build.sh
     - run: npm test
