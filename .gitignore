@@ -10,3 +10,5 @@ hc-dna/workdir/*.dna
 .ad4m-test
 ad4m-test-0
 ad4m-test.log
+
+yarn-error.log

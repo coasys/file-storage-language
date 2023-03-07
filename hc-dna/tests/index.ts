@@ -76,6 +76,7 @@ test("Share 1MB between Alice and Bob", async (t) => {
         const bufUp = Buffer.from(await blobUp.arrayBuffer());
         t.assert(bufUp.compare(bufDown) == 0)
 
+        await scenario.shutDown()
     })
 })
 
@@ -166,6 +167,8 @@ test("Share full FileExpression between Alice and Bob", async (t) => {
         const bufDown = Buffer.from(await blobDown.arrayBuffer());
         const bufUp = Buffer.from(await blobUp.arrayBuffer());
         t.assert(bufUp.compare(bufDown) == 0)
+
+        await scenario.shutDown();
   
       })
   })
