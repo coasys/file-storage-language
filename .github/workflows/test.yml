@@ -82,6 +82,6 @@ jobs:
         cache: 'npm'
     - run: rustup target add wasm32-unknown-unknown
     - run: npm install -g npm
-    - run: ./hc-dna/tests/download-hc-binaries.sh && mv ./hc /user/local/bin
+    - run: ./hc-dna/tests/download-hc-binaries.sh && mv ./hc-dna/tests/hc /user/local/bin
     - run: npm install && npm run build
     - run: npm test
