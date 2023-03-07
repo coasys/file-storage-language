@@ -823,7 +823,7 @@ anymatch@~3.1.2:
     normalize-path "^3.0.0"
     picomatch "^2.0.4"
 
-"appdata-path@github:perspect3vism/appdata-path":
+appdata-path@perspect3vism/appdata-path:
   version "1.0.0"
   resolved "https://codeload.github.com/perspect3vism/appdata-path/tar.gz/6304ea16cbfebc98749c33941d643c3046b45985"
 
