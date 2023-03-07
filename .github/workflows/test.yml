@@ -46,7 +46,7 @@ jobs:
     - run: npm install -g npm
     - run: cd hc-dna/tests && ./download-hc-binaries.sh
     - run: cargo install --version 0.2.3 lair_keystore || echo "lair already installed"
-    - run: cp ./hc-dna/tests/hc /usr/local/bin && cd hc-dna/tests && npm i && npm run build-ci && npm run test
+    - run: cp ./hc-dna/tests/hc /usr/local/bin && cp ./hc-dna/tests/holochain /usr/local/bin && && cd hc-dna/tests && npm i && npm run build-ci && npm run test
 
   integration:
     name: Integration Test
