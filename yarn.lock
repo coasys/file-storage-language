@@ -366,10 +366,10 @@
   resolved "https://registry.yarnpkg.com/@msgpack/msgpack/-/msgpack-2.8.0.tgz#4210deb771ee3912964f14a15ddfb5ff877e70b9"
   integrity sha512-h9u4u/jiIRKbq25PM+zymTyW6bhTzELvOoUd+AvYriWOAKpLGnIamaET3pnHYoI5iYphAHBI4ayx0MehR+VVPQ==
 
-"@perspect3vism/ad4m-test@0.2.16-fix.7":
-  version "0.2.16-fix.7"
-  resolved "https://registry.yarnpkg.com/@perspect3vism/ad4m-test/-/ad4m-test-0.2.16-fix.7.tgz#ca1ca6b92c9b28abb1d534358bb7b7c58a893201"
-  integrity sha512-JmpyzzhhVRFWSQSVJL/x2L1ZBRzBRdPSdlwHi5kRCX2z/OXnx8dtv6NK92DyklgeZnCylOf+zE09LDKbw5W+Tg==
+"@perspect3vism/ad4m-test@0.2.16-fix.12":
+  version "0.2.16-fix.12"
+  resolved "https://registry.yarnpkg.com/@perspect3vism/ad4m-test/-/ad4m-test-0.2.16-fix.12.tgz#4609822394abdceca48051ff8358c978f454d313"
+  integrity sha512-hhOpLnu2ZnSh3iOKNev+8UCkkJBkG5OC3S9HDH/TbW3I2j6D2bdahOhezgHbCEADMnK8Lt4r9XVS8k8LUobj/g==
   dependencies:
     "@apollo/client" "^3.7.8"
     "@perspect3vism/ad4m" "*"
