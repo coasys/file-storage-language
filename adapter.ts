@@ -20,6 +20,13 @@ export default class Adapter implements ExpressionAdapter {
 
         let addressBuffer = Buffer.from(address, "hex");
         const expression = (await storage.getFileExpression(addressBuffer)) as FileExpression
+        if (!expression) {
+            return null;
+        }
+        if (expression.data.chunks_hashes === 0 || expression.data.chunks_hashes === undefined) {
+            expression.data.data_base64 = "";
+            return expression;
+        }
         const data_compressed = await storage.download(expression.data.chunks_hashes);
         let data_stream = await data_compressed.arrayBuffer();
 
