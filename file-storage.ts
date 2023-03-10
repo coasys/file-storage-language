@@ -59,9 +59,8 @@ export class FileStorage {
     let tries = 0
     while (bytes === null && tries < 10) {
       tries++
-      try {
-        bytes = await this.#zomeCall("get_file_chunk", fileChunkHash);
-      } catch (e) {
+      bytes = await this.#zomeCall("get_file_chunk", fileChunkHash);
+      if (bytes === null) {
         await new Promise(resolve => setTimeout(resolve, 500))
       }
     }

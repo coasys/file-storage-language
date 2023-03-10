@@ -1,7 +1,6 @@
 use chrono::{DateTime, Utc};
 use hdi::prelude::*;
 
-
 #[hdk_entry_helper]
 pub struct FileChunk(SerializedBytes);
 
@@ -14,7 +13,7 @@ pub struct FileMetadata {
     pub chunks_hashes: Vec<EntryHash>,
 }
 
-#[derive(Serialize, Deserialize, Clone, SerializedBytes, Debug)]
+#[derive(Serialize, Deserialize, Clone, SerializedBytes, Debug, PartialEq)]
 pub struct ExpressionProof {
     pub signature: String,
     pub key: String,
@@ -27,7 +26,6 @@ pub struct FileExpression {
     pub timestamp: DateTime<Utc>,
     pub data: FileMetadata,
 }
-
 
 #[hdk_entry_defs]
 #[unit_enum(UnitEntryTypes)]

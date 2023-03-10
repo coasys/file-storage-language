@@ -54,6 +54,9 @@ export class FileStoragePutAdapter implements PublicSharing {
 
         //Store the FileMetadataExpression
         const address = await storage.storeFileExpression(expression)
+        if (!Buffer.isBuffer(address)) {
+            throw new Error("Could not create FileExpression data")
+        };
         //@ts-ignore
         return address.toString("hex")
     }

@@ -1,6 +1,5 @@
 import type { Address, Expression, ExpressionAdapter, PublicSharing, LanguageContext, HolochainLanguageDelegate } from "@perspect3vism/ad4m";
 import { FileStoragePutAdapter } from './putAdapter'
-import { concat as uint8ArrayConcat } from 'uint8arrays/concat';
 import pako from "pako";
 import { FileStorage } from "./file-storage";
 import { DNA_NICK } from "./dna";
@@ -22,11 +21,11 @@ export default class Adapter implements ExpressionAdapter {
         const expression = (await storage.getFileExpression(addressBuffer)) as FileExpression
         if (!expression) {
             return null;
-        }
+        };
         if (expression.data.chunks_hashes === 0 || expression.data.chunks_hashes === undefined) {
             expression.data.data_base64 = "";
             return expression;
-        }
+        };
         const data_compressed = await storage.download(expression.data.chunks_hashes);
         let data_stream = await data_compressed.arrayBuffer();
 
